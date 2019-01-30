@@ -1,0 +1,608 @@
+-- Python --
+Para ejecutar un programa:
+- Guardar programa realizado en sublime en un directorio
+- Terminal, ir al directorio dónde se encuentra y poner => python3 (nombrefichero.py)
+- si conmentamos: #!/usr/bin/env python ; en la terminal ejecutamos ./(nombrefichero)
+
+La división / devuelve un float ;  Para que devuelva un entero : //
+
+Operador de cadena : +
+
+Convertir un valor "float" en un "entero":
+
+a=2.423
+
+b=int(a)
+
+print(num,"hola que tal",sep="*",end="**")
+
+Ejemplos:
+
+edad = 18
+
+In [14]: print("mi edad es",edad,"años")
+
+print("mi edad es %d años" % edad)
+mi edad es 18 años
+
+print("mi edad es "+str(edad)+" años")
+
+Ejercicio : pedir 2 numeros y mostrar suma,resta,multiplicación y división
+
+-- 9-10-17 -- 
+Raíz cuadrada => elevar un número a 0.5
+
+import math => añade librería matemática
+
+math.pi => numero pi
+
+math.sqrt() => calcula la raíz cuadrada
+
+--- 19-10-17 ---
+"informatica" > "amor" => True
+"info" > "informatica" => False
+Saber numero par => num % 2 == 0
+
+
+--- 2-11-17 ---
+Tipos de datos
+- Básicos => int,float,boolean
+- Secuencias => Cadena de caracteres (str), listas, Tuplas
+- Mapas => Diccionarios
+
+--- 6-11-17 ---
+lista = [[1,2], [3,4]]
+lent(lista)
+
+lista[0]
+
+lista [0] [0]
+
+for i in lista:
+	for elem in i:
+		print (elem)
+
+max(lista[1::2])
+lista[::2]
+
+lista.index("pepe") 3)
+
+------------------------------
+--- Diccionarios --- 
+d1={"nombre":"pepe","edad":21}
+d1["edad"] => imprime la edad
+d1["nombre"] => imprime el nombre
+
+In [1]: d1={"nombre":"pepe","edad":21}
+
+In [2]: d1
+Out[2]: {'edad': 21, 'nombre': 'pepe'}
+
+In [3]: d1["edad"]
+Out[3]: 21
+
+In [4]: d1["nombre"]
+Out[4]: 'pepe'
+
+d1["edad"]=27
+
+In [7]: d1
+Out[7]: {'edad': 27, 'nombre': 'pepe'}
+
+d1["direccion"]="c/velta,25"
+
+In [9]: d1
+Out[9]: {'direccion': 'c/velta,25', 'edad': 27, 'nombre': 'pepe'}
+
+d1["direccion"]="c/velta,25"
+
+In [9]: d1
+Out[9]: {'direccion': 'c/velta,25', 'edad': 27, 'nombre': 'pepe'}
+
+d2={}
+
+In [13]: d2["nombre"]="maria"
+
+In [14]: d2["edad"]=20
+
+personas=[]
+
+In [17]: personas.append(d1)
+
+In [18]: personas.append(d2)
+
+In [19]: personas
+Out[19]: 
+[{'direccion': 'c/velta,25', 'nombre': 'pepe'},
+ {'edad': 20, 'nombre': 'maria'}]
+
+personas[1]["nombre"]
+Out[20]: 'maria'
+
+In [21]: for persona in personas:
+    ...:     print (persona["nombre"])
+    ...:     
+pepe
+maria
+
+a1={"nombre":"antonio","notas":[1,2,3]}
+
+In [23]: a1
+Out[23]: {'nombre': 'antonio', 'notas': [1, 2, 3]}
+
+In [24]: len(a1)
+Out[24]: 2
+
+In [25]: len(a1["notas"])
+Out[25]: 3
+
+In [26]: len(a1["nombre"])
+Out[26]: 7
+
+print(sum(a1["notas"])/len(a1["notas"]))
+2.0
+
+In [31]: a1["notas"].append(4)
+
+In [32]: a1
+Out[32]: {'nombre': 'antonio', 'notas': [1, 2, 3, 4]}
+
+a2={"nombre":"maria","notas":{"lm":6,"bd":2,"par":0}}
+
+In [34]: a2
+Out[34]: {'nombre': 'maria', 'notas': {'bd': 2, 'lm': 6, 'par': 0}}
+
+a2["notas"]["bd"]
+Out[35]: 2
+
+lista=[]
+
+In [37]: lista.append(a1)
+
+In [38]: lista.append(a2)
+
+In [39]: lista
+Out[39]: 
+[{'nombre': 'antonio', 'notas': [1, 2, 3, 4]},
+ {'nombre': 'maria', 'notas': {'bd': 2, 'lm': 6, 'par': 0}}]
+
+
+--- 30-11-17 ---
+In [1]: d1 = {"uno":1,"dos":2,"tres":3}
+
+In [2]: d1
+Out[2]: {'dos': 2, 'tres': 3, 'uno': 1}
+
+In [3]: d2 = {}
+
+In [4]: d2["uno"]=1
+
+In [5]: d2["dos"]=2
+
+In [6]: d2
+Out[6]: {'dos': 2, 'uno': 1}
+
+In [7]: d3=dict(uno=1,dos=2,tres=3)
+
+In [8]: d3
+Out[8]: {'dos': 2, 'tres': 3, 'uno': 1}
+
+In [9]: d3. 
+            d3.clear      d3.get        d3.pop        d3.update     
+            d3.copy       d3.items      d3.popitem    d3.values     
+            d3.fromkeys   d3.keys       d3.setdefault  
+
+d3.clear()
+
+In [10]: d3
+Out[10]: {}
+
+d4=dict.fromkeys(["nombre","edad"])
+
+In [13]: d4
+Out[13]: {'edad': None, 'nombre': None}
+
+d4=dict.fromkeys(["nombre","edad"],0)
+
+In [15]: d4
+Out[15]: {'edad': 0, 'nombre': 0}
+
+In [16]: d2
+Out[16]: {'dos': 2, 'uno': 1}
+
+In [17]: d1.update(d2)
+
+In [18]: d1
+Out[18]: {'dos': 2, 'tres': 3, 'uno': 1}
+
+d3.setdefault("cuatro",4)
+Out[20]: 4
+
+In [21]: d3
+Out[21]: {'cuatro': 4, 'dos': 2, 'tres': 3, 'uno': 1}
+
+In [23]: d3.get("uno")
+Out[23]: 1
+
+In [24]: d3["uno"]
+Out[24]: 1
+
+d3.get("cinco",-1) => si no existe 5 devuelve -1
+
+d3.pop("uno")
+Out[25]: 1
+
+In [26]: d3
+Out[26]: {'cuatro': 4, 'dos': 2, 'tres': 3}
+
+In [27]: d3.popitem()
+Out[27]: ('cuatro', 4)
+
+In [35]: d3.values()
+Out[35]: dict_values([3, 2, 1])
+
+In [37]: for i in d3.values():
+    ...:     print (i)
+    ...:     
+3
+2
+1
+
+d3.keys()
+Out[38]: dict_keys(['tres', 'dos', 'uno'])
+
+In [39]: d3.items()
+Out[39]: dict_items([('tres', 3), ('dos', 2), ('uno', 1)])
+
+In [40]: for k,v in d3.items():
+    ...:     print (k,v)
+    ...:     
+tres 3
+dos 2
+uno 1
+
+--- 4-12-17 ---
+f = open("fichero","r") => lectura
+type(f)
+f.tell() => posición del puntero
+cadena = f.read() => lee a partir de la posición del puntero
+f.seek(0) => mueve el puntero a la posición deseada
+f.close() => cerrar el fichero
+f.readline() => lee una línea hasta que encuentra un /n
+f.readlines() => devuelve una lista con cada una de las líneas del fichero
+with open("fichero","r") as fichero:
+	for linea in fichero:
+		print (linea)
+
+--- 11-12-17 ---
+f = open("fichero","w") => escribir en fichero, si no existe lo crea
+cad = "hola"
+f.write(cad)
+f.close()
+lista=["pepe","juan","maria"]
+f.writelines(lista)
+f.close()
+f = open("fichero","a") => si existe el fichero lo abre y escribe al final
+f.tell() => posicion del puntero
+
+f = open("fichero","r")
+lineas = f.readline()
+f.close()
+				=> añadir líneas entre líneas
+lineas.insert(2,"hola que tal\n)
+f = open("fichero","w")
+f.writelines(lineas)
+f.close()
+f.read()			
+
+--- 11-01-18 ---
+Funciones
+def calcular_segundo(hora,minutos,segundos):
+	if hora < 0 or hora > 23:
+		return -1
+	if minuto < 0 or minuto > 59:
+		return -1
+
+	return hora * 3600 + minutos * 60 + segundos	<= Se devuelve el valor 
+
+--- 12-01-18 ---
+import fechas
+fechas.dia-juliano funciones(12,4,2016)
+
+from fechas import funcion1, funcion2
+
+Para que un directorio se considere un paquete => touch __init__.py
+paquete => conjunto de libreias
+
+
+--- 18-01-18 ---
+Git / Github
+- Para guardar cambios => commit
+- Tener el repositorio en local => clone
+- Subir ficheros => push
+- Actualizar repositorio local ya clonado => pull
+- Generar clave publica = ssh-keygen 
+- Meter clave publica en github
+- clonar repositorio autentificado por ssh => git clone git@github.com:josemariamr98/prueba.git
+- estado del repositorio => git status
+- añadir fichero repositorio => git add fichero
+- antes de hacer un push, tenemos que hacer un commit => git commit -m "comentario"
+- modificar fichero => git commit -am "comentario"
+- subir fichero => git push
+- cambiar nombre a fichero en repositorio => git mv ejemplo.py ejemplo2.py
+
+--- 29-01-18 ---
+- lshw -xml > hardware.xml
+- instalar libreria => python3-lxml
+
+-- Leer y escribir documentos XML --
+- from lxml import etree
+- importar libreria => from lxml import etree
+- guardar en variable => doc = etree.parse('book.xml')
+- print etree.tostring <= filtra xml
+- raiz = doc.getroot() <= selecciona el elemento raiz del documento
+- print (len(raiz)) <= muestra los hijos de la raiz
+- primerlibro = raiz[0] <= Coge el primero hijo
+- recorrer los hijos => primerlibro.tag o primerlibro.attrib
+- len(primerlibro) <= elementos que contiene 1er book
+- print(primerlibro[2].text) <= muestra el año del libro
+- primerlibro.attrib["category"] <= muestra la categoria del 1er book
+
+raiz = doc.getroot()
+for book in raiz:			
+	print (book[0].text)
+
+In [21]: raiz = doc.getroot()
+
+In [22]: for book in raiz:
+    ...:     print (book[0].text)
+
+
+raiz = doc.getroot()
+for book in raiz:
+	if book.attrib["category"] == "COOKING":
+		print (book[0].text)
+
+- busqueda => find('book/tittle')
+- titulo = raiz.find("book/title")
+- print titulo.tag / titulo.text / titulo.tail / titulo.attrib
+- for book in raiz:
+	print (book.find("title").text)
+
+- titulos = raiz.findall('book/title') <= devuelve la lista de elementos title
+ 
+
+doc = arbol de elementos
+raiz = el primer elemento
+
+--- 8-02-98 ---
+--XPATH--
+arbol.xpath('//book/title/text()')
+
+- arbol = etree.parse('provinciasypoblaciones.xml')
+- arbol.xpath("//nombre/text()") <= Ejercicio1
+- arbol.xpath("//nombre/text()") <= Ejercicio2
+- arbol.xpath("/bookstore/book[1]/title/text()") <= Devuelve 1er elemento
+- arbol.xpath("//nombre[text()='Sevilla']")
+- arbol.xpath("/bookstore/book[title='Everyday Italian']/title/text()")
+- arbol.xpath("count(//provincia[nombre='Sevilla']/localidades/localidad)")
+
+
+# Cantidad poblaciones que tiene sevilla
+provincias = arbol.xpath('count(//provincia[nombre="Sevilla"]/localidades/localidad)')
+
+provincias2 = arbol.xpath('count(//nombre[text()="Sevilla"]/../localidades/localidad)')
+
+print (provincias)
+
+print (provincias2)
+
+
+--- 16-2-18 ---
+--JSON--
+array => conjunto de objetos
+object => entidades
+
+{"libreria":{"book":["title":__,"author":__}}
+
+import json
+
+len(doc["bookstore"]["book"]
+
+for libro in datos["bookstore"]["book"]:
+   ...:     print(libro["title"]["__text"])
+   ...:     
+   ...:     
+Everyday Italian
+Harry Potter
+XQuery Kick Start
+Learning XML
+
+- saber tipo de varibale => isinstance(var,list)
+
+Programa que muestra el nombre de todos los autores:
+for autor in datos["bookstore"]["book"]:
+    ...:     print (autor["author"])
+    ...:     
+Giada De Laurentiis
+J K. Rowling
+['James McGovern', 'Per Bothner', 'Kurt Cagle', 'James Linn', 'Vaidyanathan Nagarajan']
+Erik T. Ray
+
+--- 19-2-18 ---
+--Instalar librerias python--
+-  1º apt-get install python3-lxml
+- apt show "nombre paquete" <= Ver versiones de los paquetes
+- Pypi <= repositorio de todos los paquetes de python 
+- pip <= instala paquetes python desde pypi 
+- 2º pip3 install "nombre paquete"
+
+
+--- 22-2-18 ---
+--HTML--
+- Crear máquina en cloud y abrir puerto 80//
+- instalar apache2
+- Para ver si funciona poner la ip de la máquina en la cuál está el server
+- donde se muestran los ficheros <= /var/www/html
+- cp index.html pagina2.html 
+- para ver pagina2.html <= 172.22.201.136/pagina2.html
+- imagenes => en un directorio usar wget "url"
+- en la pagina <=  <img src="http:://172.22.201.136/img/"nombrefoto""/>
+		<= <img src="/var/www/html/img/"nombrefoto""/>
+		<= <img src="/img/nombrefoto"/>
+		<= <img src="
+- crear directorio doc <= <a href="/doc/index.html"<Enlace 1</a>
+- copiar fichero desde anfitrión a cloud:
+ scp "nombrefichero" debian@172.22.201.136:/home/debian
+- copiar un directorio <= scp -r
+- mover desde /home/debian a /var/www/html/
+
+--- 1-3-18 ---
+-- Formulario HTML5 --
+Métodos:
+- GET <= petición a una URL
+- POST
+
+--- 15-3-18 ---
+libreria requests <= libreria para hacer peticiones http
+
+--Entornos Virtuales--
+- Creando entornos virtuales con venv <= lmreadthedocs
+- mkdir virtualenv <= donde está el entorno virtual
+- crear entorno <= python3 -m venv "nombreentorno"
+- activar entorno <= source bin/activate
+- desactivar entorno <= deactivate
+- pip install requests <= instalar libreria requests
+- paquete python3-dev
+- ver versiones <= pip freeze
+- fichero con todos los paquetes del entorno virtual <= pip freeze > requirements.txt
+- pip install -r requirements.txt
+
+--- 16-3-18 ---
+import requests
+r=requests.get("url peticion")
+r.status_code <= codigo de estado
+r.headres <= cabeceras
+r.text <= cuerpo 
+r.url <= guarda la url a la que hemos hecho la llamada
+r.encoding <= codificación
+payload = {"n":"71198"} <= parametro n
+r=requests.get("url peticion sin parametros", params=payload)
+export key=clave <= para api key
+importar libreria os <= import os
+key = os.environ["key"]
+url_base = "url que no cambia de la api"
+r=requests.get(url_base+"weather/",params=payload)
+doc = r.json() <= cuando es sólo json
+doc = etre.fromstring(r.text.encode ('utf-8')) <= lee información de una cadena
+
+- key zomato = f2d2edb772f47d0a7b04de058a27b0c3
+
+
+--- 5-4-18 ---
+app.route('/saludar'):
+def saludar():
+	cad = cad + '<a href="/hello/">Saludar al mundo</a><br/'>
+
+Con url_for:
+	cad = cad + '<a href="'+url_for("hola")+'">Saludar al mundo</a><br/'>
+	cad = cad + '<a href="'+url_for("hola",nombre="pepe")+'">Saludar a pepe</a><br/'>
+	cad = '<a href="'+url_for("hola",nombre="pepe",edad="20")+'">Saludar al mundo</a><br/'>
+#hola => funcion donde se encuentra "/hello/"
+
+@app.errorhandler(404)
+def page_not_found(error):
+	return 'Pagina no encontrada...', 404
+
+--- 12-4-18 ---
+--jinja2--
+auto {{interface}}
+{{iface es-dhcp==True}}
+	iface {{interface}} inet dhcp
+{{else}}
+	iface {{interface}} inet static
+	addres---
+	netmask--
+{{endif}}
+
+{%for interface in lista_interfaces%}
+	auto {{interface}}
+{%end for%}
+
+<ul>
+{%for elem in lista_elem%}
+	<li>{{elem}}<li>
+{%end for%}
+</ul>
+
+- Guardar la plantilla en el directorio => mkdir templates
+- from flask import Flask, url_for, request, abort, rediret, render_template
+- export key=APIKey
+
+--- 16-4-18 ---
+
+mkdir static => css y img
+mkdir templates
+
+cambiar index.html a base.html => mv index.html base.html
+
+
+-- 18-4-18 ---
+--Zomato--
+1.a)curl -X GET --header "Accept: application/json" --header "user-key:  f2d2edb772f47d0a7b04de058a27b0c3 " "https://developers.zomato.com/api/v2.1/categories"
+- Devuelve :
+{"categories":[{"categories":{"id":1,"name":"Delivery"}},{"categories":{"id":2,"name":"Dine-out"}},{"categories":{"id":3,"name":"Nightlife"}},{"categories":{"id":4,"name":"Catching-up"}},{"categories":{"id":5,"name":"Takeaway"}},{"categories":{"id":6,"name":"Cafes"}},{"categories":{"id":7,"name":"Daily Menus"}},{"categories":{"id":8,"name":"Breakfast"}},{"categories":{"id":9,"name":"Lunch"}},{"categories":{"id":10,"name":"Dinner"}},{"categories":{"id":11,"name":"Pubs & Bars"}},{"categories":{"id":13,"name":"Pocket Friendly Delivery"}},{"categories":{"id":14,"name":"Clubs & Lounges"}}]}
+
+--- 23-4-18 ---
+-HEROKU-
+Para que funcione la app en local, crear variable de entorno PORT
+En el repositorio tener => requeriments.txt y Procfile(comando que tiene que ejecutar => web: python3 app.py)
+
+- Contra LASTFM => @JMR@LDC14	
+- http://www.omdbapi.com/?apikey=[649ca39e]&
+- 649ca39e
+- http://www.omdbapi.com/?t=Matrix&apikey=649ca39e
+- themoviedb.org => key = bdba0f0a525a2c9a22bcfb9a9de07c3a
+- token lectura = eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJiZGJhMGYwYTUyNWEyYzlhMjJiY2ZiOWE5ZGUwN2MzYSIsInN1YiI6IjVhZGQ4YmU2YzNhMzY4NTIxYzAwODYzMSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.c7rb3pOvGFtZA-48fQWGy9fJk6QgtTWouwSnp1Nr4S4
+
+
+--- 26-4-18 ---
+--OAUTH v1--
+- Cuando das de alta aplicación twitter => consumer_key ; consumer_secret
+- requests_token => solicitar token temporales 
+- access_token => se necesita para hacer llamadas a la api
+
+----------------------------------
+- TheMovieDB -
+- Externals ID => IMDb
+- Peliculas que han cambiado en 24 horas => https://api.themoviedb.org/3/movie/changes?api_key=&page=1
+- Certificados pelis => https://api.themoviedb.org/3/certification/movie/list?api_key=bdba0f0a525a2c9a22bcfb9a9de07c3a
+- Compañias => https://api.themoviedb.org/3/search/company?api_key=bdba0f0a525a2c9a22bcfb9a9de07c3a&query=warren&page=1
+- Peliculas => https://api.themoviedb.org/3/discover/movie?api_key=bdba0f0a525a2c9a22bcfb9a9de07c3a&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1
+- Generos =>  https://api.themoviedb.org/3/genre/movie/list?api_key=bdba0f0a525a2c9a22bcfb9a9de07c3a&language=en-ES
+- Peliculas por su genero => https://api.themoviedb.org/3/genre/80/movies?api_key=bdba0f0a525a2c9a22bcfb9a9de07c3a&language=en-ES&include_adult=false&sort_by=created_at.asc
+- Buscar peliculas => https://api.themoviedb.org/3/search/movie?api_key=bdba0f0a525a2c9a22bcfb9a9de07c3a&language=en-ES&query=Verdad%20o%20reto&page=1&include_adult=false
+- Busqueda de actores => https://api.themoviedb.org/3/search/person?api_key=bdba0f0a525a2c9a22bcfb9a9de07c3a&language=en-ES&query=johnny%20depp&page=1&include_adult=false || https://api.themoviedb.org/3/search/person?api_key=bdba0f0a525a2c9a22bcfb9a9de07c3a&language=es&query=Piratas%20del%20caribe&page=1&include_adult=false
+- Busqueda de sagas => https://api.themoviedb.org/3/search/collection?api_key=bdba0f0a525a2c9a22bcfb9a9de07c3a&language=en-ES&query=Fast%20and%20furious&page=1
+- Busqueda por generos => https://api.themoviedb.org/3/discover/movie?api_key=bdba0f0a525a2c9a22bcfb9a9de07c3a&language=es&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_genres=27
+
+-------------------------------------------------
+- Flickr - 
+- API Key => c6f0afcdcd15716b03aaa2024262b349
+- API Key Secreta => 7a0c8bdac20ee62b
+- OAUTH Token => 72157667703781837-8d5ebc81298924e2
+- OAUTH Token Secret => 07da044082bc1a64
+- Frob => 72157669744449328-489d8f032af35d93-158272681
+- User ID => 158293029@N02
+- Buscador fotos => https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=63702ed939abab67768a7f6c8b711b73&user_id=&text=vin+diesel&format=json&nojsoncallback=1&auth_token=72157669334579458-c9710f2560ef0880&api_sig=f69eb227c00328dda26f1797499b6308
+- IDS => https://api.flickr.com/services/rest/?method=flickr.people.findByUsername&api_key=63702ed939abab67768a7f6c8b711b73&username=vin+diesel&format=json&nojsoncallback=1&auth_token=72157669334579458-c9710f2560ef0880&api_sig=947914ffd0df8d515ee51238a55f3a4e
+- https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=63702ed939abab67768a7f6c8b711b73&format=json&nojsoncallback=1&auth_token=72157669334579458-c9710f2560ef0880&api_sig=d01a6086dac78aef55730218b557e50d
+- https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=84e8b7e998924533b3b8dac1edd00b9a&user_id=&text=jack+sparrow&extras=url_s&format=json&nojsoncallback=1&auth_token=72157695472070511-da03744357064f75&api_sig=66545d08b4a603828cf134ead546b5ff
+- https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=9af9f01201177831dab4b9abd06095d9&text=Paul+Walker&extras=url_l&format=json&nojsoncallback=1&auth_token=72157697034006824-21c66a275824a1cf&api_sig=fa02a9ce8f70b5bacf4d782381826f8e
+- https://api.flickr.com/services/rest/?method=flickr.auth.oauth.checkToken&api_key=9af9f01201177831dab4b9abd06095d9&oauth_token=72157697034431434-2b051f9c88e15e08&format=json&nojsoncallback=1&auth_token=72157695898406981-136fa156a8804696&api_sig=9ab7838051a06b6d86f7a7ae7826024c
+
+-------------------------------------------------
+Unplash API
+Application ID => 28787
+Access KEY => 8b0bfef3fc1469c9b359eb47b4f7b740f57bd572dad878dbafc18783967f2ea0
+Secret KEY => 54bbec2c0f98c4eeabdd36a75e598e7d6cf9caf60e521f67849ef9d729a93ae0 
