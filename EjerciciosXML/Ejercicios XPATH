@@ -1,0 +1,63 @@
+-- Ejercicio Introducción a XPATH --
+- Ejercicio 1-
+1º. Nombre del instituto
+/ies/nombre/text()
+
+2º. Página web del Instituto
+/ies/web/text()
+
+3º. Nombre de los Ciclos Formativos
+/ies/ciclos/ciclo/nombre/text()
+//ciclo/nombre/text()
+
+4º. Siglas por las que se conocen los Ciclos Formativos
+/ies/ciclos/ciclo/@id
+//ciclo/@id
+
+5º. Años en los que se publicaron los decretos de título de los Ciclos Formativos
+/ies/ciclos/ciclo/decretoTitulo/@año
+//ciclos/decretoTitulo/@año
+
+6º. Ciclos Formativos de Grado Medio 
+/ies/ciclos/ciclo[grado="Medio"]
+//ciclo[grado="Medio"]
+
+7º. Nombre de los Ciclos Formativos de Grado Superior
+/ies/ciclos/ciclo[grado="Superior"]/nombre/text()
+//ciclo[grado="Superior"]/nombre/text()
+
+8º. Nombre de los Ciclos Formativos anteriores a 2010
+/ies/ciclos/ciclo/decretoTitulo[@año<"2010"]/../nombre/text()
+//ciclo/decretoTitulo[@año<"2010"]/../nombre/text()
+
+9º. Nombre de los Ciclos Formativos de 2008 o 2010
+/ies/ciclos/ciclo/decretoTitulo[@año="2010" or @año="2008"]/../nombre/text()
+//ciclo/decretoTitulo[@año="2010" or @año="2008"]/../nombre/text()
+
+- Ejercicio 2 -
+1º. Nombre de los módulos que se imparten en el Instituto
+/ies/modulos/modulo/nombre/text()
+//modulo/nombre/text()
+
+2º. Nombre de los módulos del ciclo ASIR
+/ies/modulos/modulo[ciclo="ASIR"]/nombre/text()
+//modulo[ciclo="ASIR"]/nombre/text()
+
+3º. Nombre de los módulos que se imparten en el segundo curso de cualquier ciclo
+//modulo[curso=2]/nombre/text()
+
+4º. Nombre de los módulos de menos de 5 horas semanales
+//modulo[horasSemanales<5]/nombre/text()
+
+5º. Nombre de los módulos que se imparten en el primer curso de ASIR
+//modulo[ciclo="ASIR" and curso=1]/nombre/text()
+
+6º. Horas semanales de los módulos de más de 3 horas semanales
+//modulo[horasSemanales>3]/horasSemanales/text()
+
+- Ejercicio 3 -
+1º. Nombre de los módulos del ciclo “Sistemas Microinformáticos y Redes” 
+//modulo[ciclo=//ciclos/ciclo[nombre="Sistemas Microinformáticos y Redes"]/@id]/nombre/text()
+
+2º. Nombre de los ciclos que incluyen el módulo Lenguaje de Marcas
+//ciclo[@id=//modulos/modulo[nombre="Lenguajes de marcas y sistemas de gestión de información"]/../ciclo]/nombre/text()

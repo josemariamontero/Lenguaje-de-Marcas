@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Paneles>
+	<Evento type="Accidente" Fecha="4/02/19" Hora="14:28">
+		<Punto Kilometrico>42,200</Punto>
+		<Nombre Via>A-49</Nombre Via>
+		<Sentido>Huelva</Sentido>
+		<Via>1 carril</Via>
+		<Retención>Si</Retención>
+		<Kilometros rentención>8</Kilometros>
+	</Evento>
+	<Evento type="Retención" Fecha="4/02/19" Hora="14:30">
+		<Punto Kilometrico>550</Punto>
+		<Nombre Via>A-4</Nombre>
+		<Sentido>Sevilla</Sentido>
+		<Retención>Si</Retención>
+		<Kilometros rentención>3</Kilometros>
+	</Evento>
+</Paneles>
