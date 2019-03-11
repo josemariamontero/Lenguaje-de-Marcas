@@ -1,6 +1,6 @@
-with open("zipsjson.txt","r") as fichero:
-    diccionario = fichero.readlines()
-    #print (diccionario)
+import json 
+codigo=open("zips.json","r")
+diccionario =json.loads(codigo.readline())
 Numero_de_codigo_postales = 1
 estado = diccionario["state"]
 for linea in codigo:
