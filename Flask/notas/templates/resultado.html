@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block title %}Nombre: {{nombre}}{% endblock %}
+{% block content %}
+    <h2>Evaluacion</h2>
+    {% if {{nota}} >= 5 %}
+      	<p>{{nombre}} ha aprobado!</p>
+    {% else %}
+    	<p>{{nombre}} ha suspendido!</p>
+	{% endif %}
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block title %}Página principal{% endblock %}
+{% block content %}
+    <h1>Evaluación</h1>
+    <form action="/multiplicar" method="post">
+        <label>Nombre :</label>
+        <input type="text" name="nombre" required/>
+        <select name="numero">
+   			{% for i in range(1,11) %}
+   				<option value="{{i}}">{{i}}</option>
+   			{% endfor %}
+		</select>
+		<input type="submit" value"Enviar"/>
+    </form>
+{% endblock %}
